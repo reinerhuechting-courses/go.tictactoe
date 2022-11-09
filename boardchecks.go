@@ -8,13 +8,15 @@ func GameOver(board [][]string) bool {
 // Erwartet ein Spielfeld. Liefert true, falls Spieler X gewonnen hat.
 func PlayerXWins(board [][]string) bool {
 	return RowContainsOnly(board, 0, "X") || RowContainsOnly(board, 1, "X") || RowContainsOnly(board, 2, "X") ||
-		ColumnContainsOnly(board, 0, "X") || ColumnContainsOnly(board, 1, "X") || ColumnContainsOnly(board, 2, "X")
+		ColumnContainsOnly(board, 0, "X") || ColumnContainsOnly(board, 1, "X") || ColumnContainsOnly(board, 2, "X") ||
+		Diag1ContainsOnly(board, "X") || Diag2ContainsOnly(board, "X")
 }
 
 // Erwartet ein Spielfeld. Liefert true, falls Spieler O gewonnen hat.
 func PlayerOWins(board [][]string) bool {
 	return RowContainsOnly(board, 0, "O") || RowContainsOnly(board, 1, "O") || RowContainsOnly(board, 2, "O") ||
-		ColumnContainsOnly(board, 0, "O") || ColumnContainsOnly(board, 1, "O") || ColumnContainsOnly(board, 2, "O")
+		ColumnContainsOnly(board, 0, "O") || ColumnContainsOnly(board, 1, "O") || ColumnContainsOnly(board, 2, "O") ||
+		Diag1ContainsOnly(board, "O") || Diag2ContainsOnly(board, "O")
 }
 
 // Erwartet ein Spielfeld. Liefert true, falls das Spiel unentschieden ist.

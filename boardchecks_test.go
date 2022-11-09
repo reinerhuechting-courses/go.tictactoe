@@ -30,6 +30,13 @@ func testboardX2() [][]string {
 		{"O", "X", "O"}}
 }
 
+func testboardX3() [][]string {
+	return [][]string{
+		{"X", "O", "O"},
+		{"X", "X", "O"},
+		{"O", "X", "X"}}
+}
+
 func testboardO1() [][]string {
 	return [][]string{
 		{" ", "O", " "},
@@ -42,6 +49,13 @@ func testboardO2() [][]string {
 		{" ", "X", " "},
 		{"O", "O", "O"},
 		{"X", "O", "X"}}
+}
+
+func testboardO3() [][]string {
+	return [][]string{
+		{"O", "X", "X"},
+		{"O", "O", "X"},
+		{"X", "O", "O"}}
 }
 
 func testboardDraw() [][]string {
@@ -103,13 +117,17 @@ func ExampleNumberOfOccurrences() {
 func ExamplePlayerXWins() {
 	fmt.Println(PlayerXWins(testboardX1()))
 	fmt.Println(PlayerXWins(testboardX2()))
+	fmt.Println(PlayerXWins(testboardX3()))
 	fmt.Println(PlayerXWins(testboardO1()))
 	fmt.Println(PlayerXWins(testboardO2()))
+	fmt.Println(PlayerXWins(testboardO3()))
 	fmt.Println(PlayerXWins(testboardDraw()))
 
 	// Output:
 	// true
 	// true
+	// true
+	// false
 	// false
 	// false
 	// false
@@ -118,13 +136,17 @@ func ExamplePlayerXWins() {
 func ExamplePlayerOWins() {
 	fmt.Println(PlayerOWins(testboardX1()))
 	fmt.Println(PlayerOWins(testboardX2()))
+	fmt.Println(PlayerOWins(testboardX3()))
 	fmt.Println(PlayerOWins(testboardO1()))
 	fmt.Println(PlayerOWins(testboardO2()))
+	fmt.Println(PlayerOWins(testboardO3()))
 	fmt.Println(PlayerOWins(testboardDraw()))
 
 	// Output:
 	// false
 	// false
+	// false
+	// true
 	// true
 	// true
 	// false
