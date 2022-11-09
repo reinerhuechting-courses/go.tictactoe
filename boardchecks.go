@@ -27,8 +27,12 @@ func Draw(board [][]string) bool {
 // Hilfsfunktion: Erwartet ein Spielfeld, eine Zeilennummer und ein Symbol.
 // Liefert true, falls die entsprechende Zeile nur das Symbol enthält.
 func RowContainsOnly(board [][]string, row int, symbol string) bool {
-	// TODO
-	return false
+	for _, sym := range board[row] {
+		if sym != symbol {
+			return false
+		}
+	}
+	return true
 }
 
 // Hilfsfunktion: Erwartet ein Spielfeld, eine Spaltennummer und ein Symbol.
