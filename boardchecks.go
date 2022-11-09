@@ -57,3 +57,9 @@ func NumberOfOccurrences(board [][]string, symbol string) int {
 	}
 	return counter
 }
+
+// Erwartet ein Spielfeld, eine Zeilen- und eine Spaltennummer.
+// Liefert true, falls ein Zug an der angegebenen Stelle erlaubt ist.
+func MoveAllowed(board [][]string, row, col int) bool {
+	return row >= 0 && row <= 2 && col >= 0 && col <= 2 && board[row][col] == " "
+}
