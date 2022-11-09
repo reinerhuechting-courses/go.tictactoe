@@ -2,8 +2,7 @@ package main
 
 // Erwartet ein Spielfeld. Liefert true, falls das Spiel beendet ist.
 func GameOver(board [][]string) bool {
-	// TODO
-	return true
+	return PlayerXWins(board) || PlayerOWins(board) || Draw(board)
 }
 
 // Erwartet ein Spielfeld. Liefert true, falls Spieler X gewonnen hat.

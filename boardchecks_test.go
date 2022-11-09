@@ -119,3 +119,20 @@ func ExampleDraw() {
 	// false
 	// true
 }
+
+func ExampleGameOver() {
+	fmt.Println(GameOver(testboardX1()))
+	fmt.Println(GameOver(testboardX2()))
+	fmt.Println(GameOver(testboardO1()))
+	fmt.Println(GameOver(testboardO2()))
+	fmt.Println(GameOver(testboardDraw()))
+	fmt.Println(GameOver(testboardGeneric()))
+
+	// Output:
+	// true
+	// true
+	// true
+	// true
+	// true
+	// false
+}
