@@ -46,6 +46,9 @@ func ColumnContainsOnly(board [][]string, col int, symbol string) bool {
 	return true
 }
 
+// Erwartet ein Spielfeld und ein Symbol.
+// Liefert true, falls die Diagonale von links oben nach rechts unten
+// nur dieses Symbol enthält.
 func Diag1ContainsOnly(board [][]string, symbol string) bool {
 	for i, row := range board {
 		if row[i] != symbol {
@@ -55,6 +58,9 @@ func Diag1ContainsOnly(board [][]string, symbol string) bool {
 	return true
 }
 
+// Erwartet ein Spielfeld und ein Symbol.
+// Liefert true, falls die Diagonale von links unten nach rechts oben
+// nur dieses Symbol enthält.
 func Diag2ContainsOnly(board [][]string, symbol string) bool {
 	for i, row := range board {
 		if row[2-i] != symbol {
