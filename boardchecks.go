@@ -41,6 +41,13 @@ func ColumnContainsOnly(board [][]string, row int, symbol string) bool {
 // Hilfsfunktion: Erwartet ein Spielfeld und ein Symbol.
 // Liefert die Anzahl der Vorkommen des Symbols auf dem Spielfeld.
 func NumberOfOccurrences(board [][]string, symbol string) int {
-	// TODO
-	return 0
+	counter := 0
+	for _, row := range board {
+		for _, sym := range row {
+			if sym == symbol {
+				counter++
+			}
+		}
+	}
+	return counter
 }
