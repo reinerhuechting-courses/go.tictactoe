@@ -44,6 +44,24 @@ func ColumnContainsOnly(board [][]string, col int, symbol string) bool {
 	return true
 }
 
+func Diag1ContainsOnly(board [][]string, symbol string) bool {
+	for i, row := range board {
+		if row[i] != symbol {
+			return false
+		}
+	}
+	return true
+}
+
+func Diag2ContainsOnly(board [][]string, symbol string) bool {
+	for i, row := range board {
+		if row[2-i] != symbol {
+			return false
+		}
+	}
+	return true
+}
+
 // Hilfsfunktion: Erwartet ein Spielfeld und ein Symbol.
 // Liefert die Anzahl der Vorkommen des Symbols auf dem Spielfeld.
 func NumberOfOccurrences(board [][]string, symbol string) int {

@@ -2,10 +2,17 @@ package main
 
 import "fmt"
 
-func testboardGeneric() [][]string {
+func testboardGeneric1() [][]string {
 	return [][]string{
 		{"*", " ", " "},
 		{"*", "*", " "},
+		{"*", "*", "*"}}
+}
+
+func testboardGeneric2() [][]string {
+	return [][]string{
+		{" ", " ", "*"},
+		{" ", "*", "*"},
 		{"*", "*", "*"}}
 }
 
@@ -45,9 +52,9 @@ func testboardDraw() [][]string {
 }
 
 func ExampleRowContainsOnly() {
-	fmt.Println(RowContainsOnly(testboardGeneric(), 0, "*"))
-	fmt.Println(RowContainsOnly(testboardGeneric(), 1, "*"))
-	fmt.Println(RowContainsOnly(testboardGeneric(), 2, "*"))
+	fmt.Println(RowContainsOnly(testboardGeneric1(), 0, "*"))
+	fmt.Println(RowContainsOnly(testboardGeneric1(), 1, "*"))
+	fmt.Println(RowContainsOnly(testboardGeneric1(), 2, "*"))
 
 	// Output:
 	// false
@@ -56,9 +63,9 @@ func ExampleRowContainsOnly() {
 }
 
 func ExampleColumnContainsOnly() {
-	fmt.Println(ColumnContainsOnly(testboardGeneric(), 0, "*"))
-	fmt.Println(ColumnContainsOnly(testboardGeneric(), 1, "*"))
-	fmt.Println(ColumnContainsOnly(testboardGeneric(), 2, "*"))
+	fmt.Println(ColumnContainsOnly(testboardGeneric1(), 0, "*"))
+	fmt.Println(ColumnContainsOnly(testboardGeneric1(), 1, "*"))
+	fmt.Println(ColumnContainsOnly(testboardGeneric1(), 2, "*"))
 
 	// Output:
 	// true
@@ -66,9 +73,27 @@ func ExampleColumnContainsOnly() {
 	// false
 }
 
+func ExampleDiag1ContainsOnly() {
+	fmt.Println(Diag1ContainsOnly(testboardGeneric1(), "*"))
+	fmt.Println(Diag1ContainsOnly(testboardGeneric1(), " "))
+
+	// Output:
+	// true
+	// false
+}
+
+func ExampleDiag2ContainsOnly() {
+	fmt.Println(Diag2ContainsOnly(testboardGeneric2(), "*"))
+	fmt.Println(Diag2ContainsOnly(testboardGeneric2(), " "))
+
+	// Output:
+	// true
+	// false
+}
+
 func ExampleNumberOfOccurrences() {
-	fmt.Println(NumberOfOccurrences(testboardGeneric(), " "))
-	fmt.Println(NumberOfOccurrences(testboardGeneric(), "*"))
+	fmt.Println(NumberOfOccurrences(testboardGeneric1(), " "))
+	fmt.Println(NumberOfOccurrences(testboardGeneric1(), "*"))
 
 	// Output:
 	// 3
@@ -126,7 +151,7 @@ func ExampleGameOver() {
 	fmt.Println(GameOver(testboardO1()))
 	fmt.Println(GameOver(testboardO2()))
 	fmt.Println(GameOver(testboardDraw()))
-	fmt.Println(GameOver(testboardGeneric()))
+	fmt.Println(GameOver(testboardGeneric1()))
 
 	// Output:
 	// true
@@ -138,11 +163,11 @@ func ExampleGameOver() {
 }
 
 func ExampleMoveAllowd() {
-	fmt.Println(MoveAllowed(testboardGeneric(), 0, 0))
-	fmt.Println(MoveAllowed(testboardGeneric(), 0, 1))
-	fmt.Println(MoveAllowed(testboardGeneric(), 1, 2))
-	fmt.Println(MoveAllowed(testboardGeneric(), 0, 3))
-	fmt.Println(MoveAllowed(testboardGeneric(), -1, 2))
+	fmt.Println(MoveAllowed(testboardGeneric1(), 0, 0))
+	fmt.Println(MoveAllowed(testboardGeneric1(), 0, 1))
+	fmt.Println(MoveAllowed(testboardGeneric1(), 1, 2))
+	fmt.Println(MoveAllowed(testboardGeneric1(), 0, 3))
+	fmt.Println(MoveAllowed(testboardGeneric1(), -1, 2))
 
 	// Output:
 	// false
