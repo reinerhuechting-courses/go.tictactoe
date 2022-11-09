@@ -23,3 +23,23 @@ func Draw(board [][]string) bool {
 	// TODO
 	return true
 }
+
+// Hilfsfunktion: Erwartet ein Spielfeld, eine Zeilennummer und ein Symbol.
+// Liefert true, falls die entsprechende Zeile nur das Symbol enthält.
+func RowContainsOnly(board [][]string, row int, symbol string) bool {
+	// TODO
+	return false
+}
+
+// Hilfsfunktion: Erwartet ein Spielfeld, eine Spaltennummer und ein Symbol.
+// Liefert true, falls die entsprechende Zeile nur das Symbol enthält.
+func ColumnContainsOnly(board [][]string, row int, symbol string) bool {
+	// TODO
+	return false
+}
+
+// Hilfsfunktion: Liefert die Anzahl der Leerzeichen auf dem Spielfeld.
+func NumberOfSpaces(board [][]string) int {
+	// TODO
+	return 0
+}
