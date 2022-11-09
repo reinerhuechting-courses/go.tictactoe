@@ -20,8 +20,7 @@ func PlayerOWins(board [][]string) bool {
 
 // Erwartet ein Spielfeld. Liefert true, falls das Spiel unentschieden ist.
 func Draw(board [][]string) bool {
-	// TODO
-	return true
+	return !PlayerXWins(board) && !PlayerOWins(board) && NumberOfOccurrences(board, " ") == 0
 }
 
 // Hilfsfunktion: Erwartet ein Spielfeld, eine Zeilennummer und ein Symbol.

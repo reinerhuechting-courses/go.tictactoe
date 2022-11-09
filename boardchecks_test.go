@@ -104,3 +104,18 @@ func ExamplePlayerOWins() {
 	// true
 	// false
 }
+
+func ExampleDraw() {
+	fmt.Println(Draw(testboardX1()))
+	fmt.Println(Draw(testboardX2()))
+	fmt.Println(Draw(testboardO1()))
+	fmt.Println(Draw(testboardO2()))
+	fmt.Println(Draw(testboardDraw()))
+
+	// Output:
+	// false
+	// false
+	// false
+	// false
+	// true
+}
