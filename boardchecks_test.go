@@ -184,7 +184,7 @@ func ExampleGameOver() {
 	// false
 }
 
-func ExampleMoveAllowd() {
+func ExampleMoveAllowed() {
 	fmt.Println(MoveAllowed(testboardGeneric1(), 0, 0))
 	fmt.Println(MoveAllowed(testboardGeneric1(), 0, 1))
 	fmt.Println(MoveAllowed(testboardGeneric1(), 1, 2))
