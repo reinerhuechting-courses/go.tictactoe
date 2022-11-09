@@ -38,8 +38,9 @@ func ColumnContainsOnly(board [][]string, row int, symbol string) bool {
 	return false
 }
 
-// Hilfsfunktion: Liefert die Anzahl der Leerzeichen auf dem Spielfeld.
-func NumberOfSpaces(board [][]string) int {
+// Hilfsfunktion: Erwartet ein Spielfeld und ein Symbol.
+// Liefert die Anzahl der Vorkommen des Symbols auf dem Spielfeld.
+func NumberOfOccurrences(board [][]string, symbol string) int {
 	// TODO
 	return 0
 }
