@@ -33,9 +33,13 @@ func RowContainsOnly(board [][]string, row int, symbol string) bool {
 
 // Hilfsfunktion: Erwartet ein Spielfeld, eine Spaltennummer und ein Symbol.
 // Liefert true, falls die entsprechende Zeile nur das Symbol enthält.
-func ColumnContainsOnly(board [][]string, row int, symbol string) bool {
-	// TODO
-	return false
+func ColumnContainsOnly(board [][]string, col int, symbol string) bool {
+	for _, row := range board {
+		if row[col] != symbol {
+			return false
+		}
+	}
+	return true
 }
 
 // Hilfsfunktion: Erwartet ein Spielfeld und ein Symbol.
