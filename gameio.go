@@ -9,18 +9,7 @@ import (
 // sofern der Zug erlaubt und möglich ist.
 // Ist der Zug ungültig, muss der Spieler erneut gefragt werden.
 func MakeMove(player string, board [][]string) {
-	fmt.Printf("Spieler %v, bitte wähle dein Spielfeld (1-9): ", player)
-	var input int
-	fmt.Scanln(&input)
-	row := (input - 1) / 3
-	col := (input - 1) % 3
-
-	if MoveAllowed(board, row, col) {
-		board[row][col] = player
-		return
-	}
-	fmt.Println("Der Zug ist ungültig, bitte wiederholen!")
-	MakeMove(player, board)
+	// TODO
 }
 
 // Erwartet das Spielfeld eines beendeten Spiels und gibt das Ergebnis
