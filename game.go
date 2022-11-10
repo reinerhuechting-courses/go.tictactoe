@@ -18,18 +18,9 @@ func main() {
 		MakeMove(currentPlayer, board)
 
 		// Spieler wechseln.
-		currentPlayer = nextPlayer(currentPlayer)
+		currentPlayer = NextPlayer(currentPlayer)
 	}
 
 	// Nach dem Ende des Spiels das Ergebnis ausgeben.
 	PrintResult(board)
-}
-
-// Erwartet den String des aktuellen Spielers ("X" oder "O").
-// Liefert den String des nächsten Spielers (also den jeweils anderen).
-func nextPlayer(currentPlayer string) string {
-	if currentPlayer == "X" {
-		return "O"
-	}
-	return "X"
 }

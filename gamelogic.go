@@ -29,3 +29,12 @@ func Draw(board [][]string) bool {
 func MoveAllowed(board [][]string, row, col int) bool {
 	return row >= 0 && row <= 2 && col >= 0 && col <= 2 && board[row][col] == " "
 }
+
+// Erwartet den String des aktuellen Spielers ("X" oder "O").
+// Liefert den String des nächsten Spielers (also den jeweils anderen).
+func NextPlayer(currentPlayer string) string {
+	if currentPlayer == "X" {
+		return "O"
+	}
+	return "X"
+}

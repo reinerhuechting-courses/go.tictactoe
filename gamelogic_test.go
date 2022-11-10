@@ -86,3 +86,12 @@ func ExampleMoveAllowed() {
 	// false
 	// false
 }
+
+func ExampleNextPlayer() {
+	fmt.Println(NextPlayer("X"))
+	fmt.Println(NextPlayer("O"))
+
+	// Output:
+	// O
+	// X
+}
